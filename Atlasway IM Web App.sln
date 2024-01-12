@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlaswayInternalAPI", "AtlaswayInternalAPI\AtlaswayInternalAPI.csproj", "{B4AB9360-B22A-4366-B330-B7E8C35A43FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AtlaswayInternalAPI.SQLBusinessLogic", "AtlaswayInternalAPI.SQLBusinessLogic\AtlaswayInternalAPI.SQLBusinessLogic.csproj", "{8B56B115-37FC-43CF-94C6-4C949B2908E4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4AB9360-B22A-4366-B330-B7E8C35A43FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4AB9360-B22A-4366-B330-B7E8C35A43FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4AB9360-B22A-4366-B330-B7E8C35A43FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4AB9360-B22A-4366-B330-B7E8C35A43FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B56B115-37FC-43CF-94C6-4C949B2908E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B56B115-37FC-43CF-94C6-4C949B2908E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B56B115-37FC-43CF-94C6-4C949B2908E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B56B115-37FC-43CF-94C6-4C949B2908E4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9BA2FE5B-07AC-436C-82BD-2902FE6F865F}
+	EndGlobalSection
+EndGlobal
