@@ -18,7 +18,8 @@ public class AtlaswayInternalDbContext : DbContext
     #region Tables
 
     internal DbSet<Client>              Clients             { get; private init; }
-    internal DbSet<Project>             Projects            { get; private init; }
+    internal DbSet<Project>             Projects            { get; set; }
+    //internal DbSet<ProjectV2>           ProjectsV2          { get; private init; }
     internal DbSet<ProjectStatusType>   ProjectStatusTypes  { get; private init; }
     internal DbSet<Staff>               Staff               { get; private init; }
 

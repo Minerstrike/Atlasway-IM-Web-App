@@ -21,6 +21,18 @@ public sealed class ProjectsActionsContext : BaseActionsContext<AtlaswayInternal
         return dbContext.Projects;
     }
 
+    public void PostProject(Project project)
+    {
+        dbContext.Projects.Add(project);
+
+        dbContext.SaveChanges();
+    }
+
+    //public IQueryable<ProjectV2> GetProjectsV2()
+    //{
+    //    return dbContext.ProjectsV2;
+    //}
+
     public IQueryable<ProjectStatusType> GetProjectStatusTypes()
     {
         return dbContext.ProjectStatusTypes;
