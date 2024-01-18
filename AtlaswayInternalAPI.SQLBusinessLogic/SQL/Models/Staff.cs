@@ -22,4 +22,12 @@ public class Staff
         ContactNo       = contactNo;
         EmailAddress    = emailAddress;
     }
+
+    public Staff(string surname, string firstname, string? contactNo, string? emailAddress)
+    {
+        Surname         = surname;  
+        Firstname       = firstname;
+        ContactNo       = contactNo;
+        EmailAddress    = emailAddress;
+    }
 }

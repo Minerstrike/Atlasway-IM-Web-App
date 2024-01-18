@@ -19,3 +19,17 @@ public struct Client_Json
         EmailAddress    = client.EmailAddress;
     }
 }
+
+public struct NewClient_Json
+{
+    [JsonPropertyName("clientName")]    public string   ClientName      { get; init; }
+    [JsonPropertyName("contactNo")]     public string?  ContactNo       { get; init; }
+    [JsonPropertyName("emailAddress")]  public string?  EmailAddress    { get; init; }
+
+    internal NewClient_Json(string clientName, string? contactNo = null, string? emailAddress = null)
+    {
+        ClientName      = clientName;
+        ContactNo       = contactNo;
+        EmailAddress    = emailAddress;
+    }
+}

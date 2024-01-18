@@ -20,4 +20,11 @@ public class Client
         ContactNo      = contactNo;
         EmailAddress   = emailAddress;
     }
+
+    public Client(string clientName, string? contactNo, string? emailAddress)
+    {
+        ClientName     = clientName;
+        ContactNo      = contactNo;
+        EmailAddress   = emailAddress;
+    }
 }

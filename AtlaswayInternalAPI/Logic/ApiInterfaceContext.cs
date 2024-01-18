@@ -34,6 +34,31 @@ internal sealed class ApiInterfaceContext
             .Select(x => new Client_Json(x));
     }
 
+    internal void PostClient(NewClient_Json client_Json)
+    {
+        ClientsActionsContext clientsContext = new ClientsActionsContext(dbContext);
+
+        Client client = new Client(
+            clientName      : client_Json.ClientName,
+            contactNo       : client_Json.ContactNo,
+            emailAddress    : client_Json.EmailAddress);
+
+        clientsContext.PostClient(client);
+    }
+
+    internal void UpdateClient(Client_Json client_Json)
+    {
+        ClientsActionsContext clientsContext = new ClientsActionsContext(dbContext);
+
+        Client client = new Client(
+            clientNo        : client_Json.ClientNo,
+            clientName      : client_Json.ClientName,
+            contactNo       : client_Json.ContactNo,
+            emailAddress    : client_Json.EmailAddress);
+
+        clientsContext.UpdateClient(client);
+    }
+
     internal IEnumerable<Project_Json> GetProjects()
     {
         ProjectsActionsContext projectsContext = new ProjectsActionsContext(dbContext);
@@ -53,6 +78,19 @@ internal sealed class ApiInterfaceContext
             statusNo    : project_Json.StatusNo);
 
         projectsContext.PostProject(project);
+    }
+
+    internal void PutProject(Project_Json project_Json)
+    {
+        ProjectsActionsContext projectsContext = new ProjectsActionsContext(dbContext);
+
+        Project project = new Project(
+            projectNo   : project_Json.ProjectNo,
+            projectName : project_Json.ProjectName,
+            clientNo    : project_Json.ClientNo,
+            statusNo    : project_Json.StatusNo);
+
+        projectsContext.PutProject(project);
     }
 
     //internal IEnumerable<Project_JsonV2> GetProjectsV2()
@@ -80,6 +118,33 @@ internal sealed class ApiInterfaceContext
         return staffContext
             .GetStaff()
             .Select(x => new Staff_Json(x));
+    }
+
+    internal void PostStaff(NewStaff_Json staff_json)
+    {
+        StaffActionsContext staffContext = new StaffActionsContext(dbContext);
+
+        Staff staff = new Staff(
+            surname         : staff_json.Surname,
+            firstname       : staff_json.Firstname,
+            contactNo       : staff_json.ContactNo,
+            emailAddress    : staff_json.EmailAddress);
+
+        staffContext.PostStaff(staff);
+    }
+
+    internal void PutStaff(Staff_Json staff_json)
+    {
+        StaffActionsContext staffContext = new StaffActionsContext(dbContext);
+
+        Staff staff = new Staff(
+            staffNo         : staff_json.StaffNo,
+            surname         : staff_json.Surname,
+            firstname       : staff_json.Firstname,
+            contactNo       : staff_json.ContactNo,
+            emailAddress    : staff_json.EmailAddress);
+
+        staffContext.PutStaff(staff);
     }
 
     #endregion

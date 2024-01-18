@@ -35,8 +35,25 @@ public class StaffController : BaseController
     {
         return Ok(context
             .GetStaff()
-            .Where(x => x.StaffNo == StaffNo)
-            );
+            .Where(x => x.StaffNo == StaffNo));
+    }
+
+    //POST: api/staff
+    [HttpPost]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesDefaultResponseType(typeof(Error))]
+    public void Post(NewStaff_Json staff_Json)
+    {
+        context.PostStaff(staff_Json);
+    }
+
+    //PUT: api/staff
+    [HttpPut]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesDefaultResponseType(typeof(Error))]
+    public void Update(Staff_Json staff_Json)
+    {
+        context.PutStaff(staff_Json);
     }
 
     #endregion

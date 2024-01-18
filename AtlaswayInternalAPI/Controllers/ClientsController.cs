@@ -38,5 +38,21 @@ public class ClientsController : BaseController
             );
     }
 
+    //POST: api/Clients
+    [HttpPost]
+    [ProducesDefaultResponseType(typeof(Error))]
+    public void Post(NewClient_Json client)
+    {
+        context.PostClient(client);
+    }
+
+    //POST: api/Clients
+    [HttpPut]
+    [ProducesDefaultResponseType(typeof(Error))]
+    public void Update(Client_Json client)
+    {
+        context.UpdateClient(client);
+    }
+
     #endregion
 }

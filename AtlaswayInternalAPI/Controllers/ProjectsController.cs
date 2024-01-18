@@ -38,10 +38,20 @@ public class ProjectsController : BaseController
 
     //POST: api/Projects
     [HttpPost]
+    [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesDefaultResponseType(typeof(Error))]
     public void Post(NewProject_Json project)
     {
         context.PostProject(project);
+    }
+
+    //PUT: api/Projects
+    [HttpPut]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesDefaultResponseType(typeof(Error))]
+    public void Update(Project_Json project)
+    {
+        context.PutProject(project);
     }
 
     #endregion

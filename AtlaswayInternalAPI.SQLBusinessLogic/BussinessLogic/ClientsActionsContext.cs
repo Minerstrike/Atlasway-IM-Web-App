@@ -20,5 +20,19 @@ public sealed class ClientsActionsContext : BaseActionsContext<AtlaswayInternalD
         return dbContext.Clients;
     }
 
+    public void PostClient(Client client)
+    {
+        dbContext.Clients.Add(client);
+
+        dbContext.SaveChanges();
+    }
+
+    public void UpdateClient(Client client)
+    {
+        dbContext.Clients.Update(client);
+
+        dbContext.SaveChanges();
+    }
+
     #endregion
 }

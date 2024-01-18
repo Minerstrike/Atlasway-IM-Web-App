@@ -28,6 +28,13 @@ public sealed class ProjectsActionsContext : BaseActionsContext<AtlaswayInternal
         dbContext.SaveChanges();
     }
 
+    public void PutProject(Project project)
+    {
+        dbContext.Projects.Update(project);
+
+        dbContext.SaveChanges();
+    }
+
     //public IQueryable<ProjectV2> GetProjectsV2()
     //{
     //    return dbContext.ProjectsV2;
