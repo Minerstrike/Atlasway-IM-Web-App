@@ -1,4 +1,5 @@
-﻿using AtlaswayInternalAPI.Controllers.Base;
+﻿using AtlaswayInternalAPI.Authentication;
+using AtlaswayInternalAPI.Controllers.Base;
 using AtlaswayInternalAPI.Models;
 using AtlaswayInternalAPI.SQLBusinessLogic.SQL;
 using FluentResults;
@@ -6,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace AtlaswayInternalAPI.Controllers;
 
+[ApiKeyAuthFilter]
 public class ProjectsController : BaseController
 {
     #region Constructors
@@ -25,7 +27,7 @@ public class ProjectsController : BaseController
         return Ok(context.GetProjects());
     }
 
-    //GET: api/Projects/100
+    //GET: api/Projects/24000
     [HttpGet("{projectNo}")]
     [ProducesResponseType(typeof(List<Project_Json>), StatusCodes.Status200OK)]
     [ProducesDefaultResponseType(typeof(Error))]

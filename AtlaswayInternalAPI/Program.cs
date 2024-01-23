@@ -1,3 +1,4 @@
+using AtlaswayInternalAPI.Authentication;
 using AtlaswayInternalAPI.SQLBusinessLogic.SQL;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,8 +29,7 @@ public class Program
                 configPolicy => configPolicy
                 .AllowAnyOrigin()
                 .AllowAnyHeader()
-                .AllowAnyMethod()
-                );
+                .AllowAnyMethod());
         });
 
         builder.Services.AddControllers();
@@ -37,6 +37,8 @@ public class Program
         builder.Services.AddEndpointsApiExplorer();
 
         builder.Services.AddSwaggerGen();
+
+        builder.Services.AddScoped<ApiKeyAuthFilter>();
 
         WebApplication app = builder.Build();
 
