@@ -9,26 +9,6 @@
     }
   },
   "profiles": {
-    //"http - OpenAPI": {
-    //  "commandName": "Project",
-    //  "dotnetRunMessages": true,
-    //  "launchBrowser": true,
-    //  "launchUrl": "swagger",
-    //  "applicationUrl": "http://localhost:5263",
-    //  "environmentVariables": {
-    //    "ASPNETCORE_ENVIRONMENT": "Development"
-    //  }
-    //},
-    //"https - OpenAPI": {
-    //  "commandName": "Project",
-    //  "dotnetRunMessages": true,
-    //  "launchBrowser": true,
-    //  "launchUrl": "swagger",
-    //  "applicationUrl": "https://localhost:7251;http://localhost:5181",
-    //  "environmentVariables": {
-    //    "ASPNETCORE_ENVIRONMENT": "Development"
-    //  }
-    //},
     "http": {
       "commandName": "Project",
       "dotnetRunMessages": true,
