@@ -70,7 +70,7 @@ public class ProjectsV2Controller : BaseController
 
     #region Network Requests
 
-    //GET: api/Projects
+    //GET: api/ProjectsV2
     [HttpGet]
     [ProducesResponseType(typeof(List<Project_Json>), StatusCodes.Status200OK)]
     [ProducesDefaultResponseType(typeof(Error))]
@@ -79,7 +79,7 @@ public class ProjectsV2Controller : BaseController
         return Ok(context.GetProjects());
     }
 
-    //GET: api/Projects/24000
+    //GET: api/ProjectsV2/24000
     [HttpGet("{projectNo}")]
     [ProducesResponseType(typeof(List<Project_Json>), StatusCodes.Status200OK)]
     [ProducesDefaultResponseType(typeof(Error))]
@@ -90,7 +90,7 @@ public class ProjectsV2Controller : BaseController
             .Where(x => x.ProjectNo == projectNo));
     }
 
-    //POST: api/Projects
+    //POST: api/ProjectsV2
     [HttpPost]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesDefaultResponseType(typeof(Error))]
@@ -99,7 +99,7 @@ public class ProjectsV2Controller : BaseController
         context.PostProject(project);
     }
 
-    //PUT: api/Projects
+    //PUT: api/ProjectsV2
     [HttpPut]
     [ProducesResponseType(StatusCodes.Status200OK)]
     [ProducesDefaultResponseType(typeof(Error))]
@@ -111,36 +111,3 @@ public class ProjectsV2Controller : BaseController
     #endregion
 
 }
-
-//public class ProjectsV2Controller : BaseController
-//{
-//    #region Constructors
-
-//    public ProjectsV2Controller(AtlaswayInternalDbContext dbContext) : base(dbContext) { }
-
-//    #endregion
-
-//    #region Network Requests
-
-//    //GET: api/Projects
-//    [HttpGet]
-//    [ProducesResponseType(typeof(List<Project_JsonV2>), StatusCodes.Status200OK)]
-//    [ProducesDefaultResponseType(typeof(Error))]
-//    public IActionResult Get()
-//    {
-//        return Ok(context.GetProjectsV2());
-//    }
-
-//    //GET: api/Project/100
-//    [HttpGet("{projectNo}")]
-//    [ProducesResponseType(typeof(List<Project_JsonV2>), StatusCodes.Status200OK)]
-//    [ProducesDefaultResponseType(typeof(Error))]
-//    public IActionResult Get(int projectNo)
-//    {
-//        return Ok(context
-//            .GetProjectsV2()
-//            .Where(x => x.ProjectNo == projectNo));
-//    }
-
-//    #endregion
-//}
